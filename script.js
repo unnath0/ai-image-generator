@@ -1,4 +1,4 @@
-const apiKey = "your API key";
+// const apiKey = "your API key";
 
 const maxImages = 4;
 let selectedImageNumber = null;
