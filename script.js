@@ -1,4 +1,4 @@
-const apiKey = "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";
+const apiKey = "your API key";
 
 const maxImages = 4;
 let selectedImageNumber = null;
