@@ -1,6 +1,6 @@
 > Web app that generates image using AI
 
-I have utilized a model called openjourney made by prompthero
+I have utilized a model called openjourney made by prompthero [openjourney](https://huggingface.co/prompthero/openjourney)
 
 **A Hugginface API key is required which you can get quite easily** 
 
