@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #221f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+}
+
+.container {
+    position: relative;
+    width: 40rem;
+    padding: 20px 30px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #ed2ff0;
+    filter: blur(140px);
+    left: -20%;
+    top: 10%;
+    z-index: -1000;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #675afe;
+    filter: blur(140px);
+    right: -20%;
+    bottom: 10%;
+    z-index: -1000;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.4rem;
+    text-align: justify;
+    color: #ccc;
+}
+
+.gen-form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.gen-form > input {
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    padding: 0 15px;
+    border: 1px solid #999;
+    transition: all 0.3s ease;
+}
+
+.gen-form > input:hover , .gen-form > input:focus {
+    border-color: #675afe;
+}
+
+.gen-form > button {
+    width: 20%;
+    height: 36px;
+    color: #fff;
+    border: 1px solid #ccc;
+    background: #20232c;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.gen-form > button:hover {
+    background: #675afe;
+    border-color: transparent;
+}
+
+#loading {
+    margin: 10px 0;
+    font-size: 18px;
+    display: none;
+}
+
+.gen-form button:disabled, .gen-form button[disabled] {
+    border: 1px solid #999;
+    background-color: #ccc;
+    color: #666;
+    cursor: auto;
+}
+
+.result {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+    gap: 10px;
+    max-width: 80%;
+}
+
+#image-grid img {
+    width: 100%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#image-grid img:hover {
+    border-color: #675afe;
+}
